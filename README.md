@@ -1,47 +1,33 @@
-# Real-time Object Detection and Tracking with YOLOv8 and Streamlit
+# Real-time Object Detection and Posture Evaluation using YOLOv8 and Streamlit
 
-This repository is a comprehensive open-source project that demonstrates the integration of object detection and tracking using the YOLOv8 object detection algorithm and Streamlit, a popular Python web application framework for building interactive web applications. This project provides a user-friendly and customizable interface that can detect and track objects in real-time video streams.
+"Ergonomy 4.0" is an innovative academic project that harnesses the capabilities of computer vision to enhance industrial safety and efficiency. In the demanding environment of welding operations, ensuring the proper use of Personal Protective Equipment (PPE) and maintaining correct posture are critical for operator safety. This project specifically aims to develop a computer vision system capable of real-time detection of PPE compliance and posture evaluation.
 
-## Demo WebApp
+By integrating advanced image processing techniques, the system will continuously monitor welding operators to check for the proper use of helmets, gloves, and other protective gear, and assess their posture during operations. This dual capability aims to significantly reduce the risk of injuries and long-term health problems associated with poor ergonomics and inadequate safety gear usage.
 
-This app is up and running on Streamlit cloud server!!! Thanks 'Streamlit' for the community support for the cloud upload. You can check the demo of this web application on the link below.
-
-[yolov8-streamlit-detection-tracking-webapp](https://codingmantras-yolov8-streamlit-detection-tracking-app-njcqjg.streamlit.app/)
-
-## Tracking With Object Detection Demo
-
-<https://user-images.githubusercontent.com/104087274/234874398-75248e8c-6965-4c91-9176-622509f0ad86.mov>
+Our goal is not only to create a tool that improves workplace safety but also to provide a framework that can be adapted to other industrial settings where safety and ergonomics are of paramount importance. This project represents a crucial step towards embedding intelligent safety solutions in industrial operations, aligning with the principles of Industry 4.0 to create smarter, safer workplaces.
 
 ## Demo Pics
 
 ### Home page
 
-<img src="https://github.com/CodingMantras/yolov8-streamlit-detection-tracking/blob/master/assets/pic1.png" >
+<img src="https://github.com/ChaimaeBLM/Ergonomie-4.0/blob/main/images/ergonomie4.0Interface.png" >
 
-### Page after uploading an image and object detection
-
-<img src="https://github.com/CodingMantras/yolov8-streamlit-detection-tracking/blob/master/assets/pic3.png" >
-
-### Segmentation task on image
-
-<img src="https://github.com/CodingMantras/yolov8-streamlit-detection-tracking/blob/master/assets/segmentation.png" >
-
+## Technologies Stack
+This project was successfully implemented using cutting-edge technologies in computer vision and web application development.
+### Streamlit:
+Streamlit is an open-source Python library designed to make it easy for developers to create and share beautiful, custom web apps for machine learning and data science. It allows users to turn data scripts into shareable web applications quickly and with minimal code.
+### MediaPipe:
+MediaPipe is an open-source framework created by Google for building multimodal (video, audio, any time-series data) applied machine learning pipelines. It offers developers pre-built modules that include model solutions for tasks like face detection, hand tracking, and object detection, facilitating the rapid development of prototypes and applications on both desktop and mobile platforms.
+### YOLOv8:
+YOLOv8 (You Only Look Once version 8) is a deep learning model for object detection tasks, which can identify and classify different objects in images or video frames in real-time. It is the eighth iteration of the YOLO series, known for its speed and accuracy in detecting objects by processing the image in a single pass, hence the name "You Only Look Once".
 ## Requirements
 
 Python 3.6+
 YOLOv8
 Streamlit
+mediapipe
+openCV
 
-```bash
-pip install ultralytics streamlit pytube
-```
-
-## Installation
-
-- Clone the repository: git clone <https://github.com/CodingMantras/yolov8-streamlit-detection-tracking.git>
-- Change to the repository directory: `cd yolov8-streamlit-detection-tracking`
-- Create `weights`, `videos`, and `images` directories inside the project.
-- Download the pre-trained YOLOv8 weights from (<https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt>) and save them to the `weights` directory in the same project.
 
 ## Usage
 
@@ -50,7 +36,7 @@ pip install ultralytics streamlit pytube
 
 ### ML Model Config
 
-- Select task (Detection, Segmentation)
+- Select task (Detection)
 - Select model confidence
 - Use the slider to adjust the confidence threshold (25-100) for the model.
 
@@ -94,25 +80,9 @@ VIDEOS_DICT = {
 
 - Click on `Detect Video Objects` button and the selected task (detection/segmentation) will start on the selected video.
 
-### Detection on RTSP
-
-- Select the RTSP stream button
-- Enter the rtsp url inside the textbox and hit `Detect Objects` button
-
-### Detection on YouTube Video URL
-
-- Select the source as YouTube
-- Copy paste the url inside the text box.
-- The detection/segmentation task will start on the YouTube video url
-
-<https://user-images.githubusercontent.com/104087274/226178296-684ad72a-fe5f-4589-b668-95c835cd8d8a.mov>
-
 ## Acknowledgements
 
 This app is based on the YOLOv8(<https://github.com/ultralytics/ultralytics>) object detection algorithm. The app uses the Streamlit(<https://github.com/streamlit/streamlit>) library for the user interface.
 
-### Disclaimer
 
-Please note that this project is intended for educational purposes only and should not be used in production environments.
 
-**Hit star ⭐ if you like this repo!!!**
